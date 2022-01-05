@@ -3,8 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MasterMind.MainPage">
 
-    <StackLayout>
-        
+    <StackLayout x:Name="StkMain" HorizontalOptions="Center" VerticalOptions="Center" >
+        <Grid x:Name="GrdBoard" BackgroundColor="Tan" HeightRequest="500" WidthRequest="220" Padding="5" IsVisible="False">
+            <Grid.RowDefinitions >
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+           
+        </Grid>
+        <Button x:Name="BtnStartGame" Text="Start New Game" Clicked="BtnStartGame_Clicked"/>
+        <Grid x:Name="GrdColorBoard" BackgroundColor="Tan" HorizontalOptions="Center" HeightRequest="90" WidthRequest="190" IsVisible="False">
+            
+        </Grid>
+        <Button x:Name="BtnCheck" Text="Check" IsVisible="false" Clicked="BtnCheck_Clicked"/>
     </StackLayout>
 
 </ContentPage>
