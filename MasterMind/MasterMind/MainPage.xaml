@@ -3,36 +3,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MasterMind.MainPage">
 
-    <StackLayout x:Name="StkMain" HorizontalOptions="Center" VerticalOptions="Center" >
-        <Grid x:Name="GrdBoard" BackgroundColor="Tan" HeightRequest="500" WidthRequest="220" Padding="5" IsVisible="False">
-            <Grid.RowDefinitions >
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+        
+        <StackLayout VerticalOptions="Center" Margin="20">
+            <Button x:Name="BtnLoad" Text="Load Game" Clicked="BtnLoad_Clicked"/>
+        </StackLayout>
+        
+        <StackLayout x:Name="StkMain" HorizontalOptions="Center" VerticalOptions="Center" Orientation="Vertical">        
+            <Grid x:Name="GrdBoard" BackgroundColor="Tan" HeightRequest="500" WidthRequest="220" Padding="5" IsVisible="False">
+                <Grid.RowDefinitions >
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
             
            
-        </Grid>
-        <Button x:Name="BtnStartGame" Text="Start New Game" Clicked="BtnStartGame_Clicked"/>
-        <Grid x:Name="GrdColorBoard" BackgroundColor="Tan" HorizontalOptions="Center" HeightRequest="90" WidthRequest="190" IsVisible="False">
+            </Grid>
+            <Button x:Name="BtnStartGame" Text="Start New Game" Clicked="BtnStartGame_Clicked"/>
+            <Grid x:Name="GrdColorBoard" BackgroundColor="Tan" HorizontalOptions="Center" HeightRequest="90" WidthRequest="190" IsVisible="False">
             
-        </Grid>
-        <Button x:Name="BtnCheck" Text="Check" IsVisible="false" Clicked="BtnCheck_Clicked"/>
+            </Grid>
+            <Button x:Name="BtnCheck" Text="Check" IsVisible="false" Clicked="BtnCheck_Clicked"/>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="Center" Margin="20">
+            <Button x:Name="BtnSave" Text="Save Game" Clicked="BtnSave_Clicked" />
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
